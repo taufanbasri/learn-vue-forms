@@ -48,6 +48,9 @@
       </div>
     </div>
     <div class="form-control">
+      <rating-control></rating-control>
+    </div>
+    <div class="form-control">
       <input type="checkbox" name="confirm-terms" id="confirm-terms" v-model="confirm">
       <label for="confirm-terms">Agree to term of user?</label>
     </div>
@@ -58,7 +61,12 @@
 </template>
 
 <script>
+import RatingControl from "./RatingControl";
+
 export default {
+  components: {
+    RatingControl
+  },
   data() {
     return {
       userName: '',
